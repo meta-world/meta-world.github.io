@@ -1,7 +1,7 @@
 # Meta-World: A Benchmark and Evaluation for Multi-Task and Meta- Reinforcement Learning
 
 ###### ML45 Benchmark
-![](figures/ML45_TASKS.png)
+![](figures/ml45-1080p.gif)
 Meta-World contains 50 manipulation tasks, designed to be diverse yet carry shared structure that can be leveraged for efficient multi-task RL and transfer to new tasks via meta-RL. In the most difficult evaluation, the method must use experience from 45 training tasks (left) to quickly learn distinctly new test tasks.
 
 ## Abstract
@@ -9,7 +9,7 @@ Meta-reinforcement learning algorithms can enable robots to acquire new skills m
 
 ## About the Benchmark
 
-![](figures/metaworld.png)
+![](figures/metaworld-1080p.gif)
 Visualization of three of our multi-task and meta-learning evaluation protocols, ranging from within task adaptation in ML1, to multi-task training across 10 distinct task families in MT10, to adapting to new tasks in ML9. Our most challenging evaluation mode ML45 is shown [above](#ml45-benchmark).
 
 ### Parametric vs Non-Parametric Variation
