@@ -82,11 +82,10 @@
     <div class="container">
       <h2>About</h2>
 
-      <p>In meta-learning, the goal is not just to learn one skill, but to learn a number of skills. From learning a number of skills, we hope to learn to acquire a completely new skill.</p>
-
       <img src="img/metalearning.png" class="img-fluid" alt="">
-
-      <p>To evaluate state of the art meta-learning algorithms, we need a diverse set of skills to test on. The Meta-World benchmark contains manipulation tasks, designed to be diverse yet carry shared structure that can be leveraged for efficient multi-task RL and transfer to new tasks via meta-RL. The Meta-World benchmark has three different difficulty modes for evaluation.</p>
+      <p>In multi-task learning and meta-learning, the goal is not just to learn one skill, but to learn a number of skills. In multi-task RL, we assume that we want to learn a fixed set of skills with minimal data, while in meta-RL, we want to use experience from a set of skills such that we can learn to solve new skills quickly.</p>
+      
+      <p>To evaluate state of the art multi-task and meta-learning algorithms, we need a diverse yet structured set of skills to evaluate them on. The Meta-World benchmark contains 50 manipulation tasks, designed to be diverse yet carry shared structure that can be leveraged for efficient multi-task RL and transfer to new tasks via meta-RL. The Meta-World benchmark has three different difficulty modes for evaluation, described next.</p>
       <div class="row">
         <div class="col-md-8 mx-auto">
           <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
@@ -94,11 +93,10 @@
         </div>
       </div>
     </div>
-  </section>
 
-    <section class="features" id="alltasks">
     <div class="container">
-      <h2>Meta-Learning 1</h2>
+        <!--<h2>Meta-World Evaluation Modes</h2>-->
+      <h3>Meta-Learning 1 (ML1)</h3>
 
       <p>Meta-Learning 1 (ML1) is our easiest evaluation mode. The setting is a single task manipulation tasks, where we try to reach, push, and pick and place an object to variable goals. At test time, we present goals not seen during training.</p>
       <img src="figures/ml1.gif" class="img-fluid" alt="">
@@ -110,15 +108,14 @@
         </div>
       </div>
     </div>
-  </section>
 
-<section class="features" id="alltasks">
     <div class="container">
-      <h2>Meta-Learning 10 and Multi-task 10</h2>
+      <h3>Meta-Learning 10 (ML10)</h3>
 
       <p>ML10 is a harder meta-learning task, where we train on 10 manipulation tasks, and are given 5 new ones at test time.</p>
       <img src="figures/ml10.gif" class="img-fluid" alt="">
 
+      <h3>Multi-Task 10 (MT10)</h3>
       <p>MT10 tests multi-task learning- that is, simply learning a policy that can succeed on a diverse set of tasks, without testing generalization. </p>
       <img src="figures/mt10.gif" class="img-fluid" alt="">
       <div class="row">
@@ -128,16 +125,16 @@
         </div>
       </div>
     </div>
-</section>
 
 
-<section class="features" id="alltasks">
     <div class="container">
-      <h2>ML45</h2>
+      <h3>Meta-Learning 45 (ML45)</h3>
 
       <p>ML45 is a meta-learning mode with 45 train tasks and 5 test tasks.</p>
       <img src="figures/ml45-1080p.gif" class="img-fluid" alt="">
 
+      <h3>Multi-Task 50 (MT50)</h3>
+      <p>Finally, MT50 evaluates the ability to efficiently learn all 50 of the above manipulation tasks.</p>
       <div class="row">
         <div class="col-md-8 mx-auto">
           <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
@@ -150,14 +147,15 @@
 
   <section class="features" id="about">
     <div class="container">
-      <div class="section-heading text-center">
+      <div class="section-heading ">
            <h2>Contributors</h2>
-        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/kevin.png" style="width: 100%">Tianhe Yu</p>
-        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/deirdre.jpeg" style="width: 100%">Deirdre Quillen</p>
-        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/zhanpeng.jpg" style="width: 100%">Zhanpeng He</p>
-        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ryan_julian_cropped_size-small.jpg" style="width: 100%">Ryan Julian</p>
-        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ChelseaFinn.jpg" style="width: 100%">Chelsea Finn</p>
-        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/portrait_lab_small.png" style="width: 100%">Sergey Levine</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/kevin.png" style="width: 100%">Tianhe Yu</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/deirdre.jpeg" style="width: 100%">Deirdre Quillen</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/zhanpeng.jpg" style="width: 100%">Zhanpeng He</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ryan_julian_cropped_size-small.jpg" style="width: 100%">Ryan Julian</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/karol.jpg" style="width: 100%">Karol Hausman</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/portrait_lab_small.png" style="width: 100%">Sergey Levine</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ChelseaFinn.jpg" style="width: 100%">Chelsea Finn</p>
       </div>
       </div>
     </div>
