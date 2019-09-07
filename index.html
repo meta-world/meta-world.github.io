@@ -60,7 +60,7 @@
         <div class="col-lg-7 my-auto">
           <div class="header-content mx-auto">
             <h1 class="mb-5">Meta-World:  A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning</h1>
-            <a href="https://github.com/tianheyu927/metaworld" class="btn btn-outline btn-xl js-scroll-trigger">Source Code</a>
+            <a href="https://github.com/rlworkgroup/garage" class="btn btn-outline btn-xl js-scroll-trigger">Source Code</a>
           </div>
         </div>
 
@@ -68,11 +68,11 @@
     </div>
   </header>
 
-  <section class="download bg-primary text-center" id="abstract">
-    <div class="container">
+  <section class="download bg-secondary text-center" id="abstract">
+    <div class="container" >
       <div class="section-heading text-center">
         <h2>Abstract</h2>
-        <p class="text-muted">Meta-reinforcement learning algorithms can enable robots to acquire new skills much more quickly, by leveraging prior experience to learn how to learn. However, much of the current research on meta-reinforcement learning focuses on task distributions that are very narrow. For example, a commonly used meta-reinforcement learning benchmark uses different running velocities for a simulated robot as different tasks. When policies are meta-trained on such narrow task distributions, they cannot possibly generalize to more quickly acquire entirely new tasks. Therefore, if the aim of these methods is enable faster acquisition of entirely new behaviors, we must evaluate them on task distributions that are sufficiently broad to enable generalization to new behaviors. In this paper, we propose an open-source simulated benchmark for meta-reinforcement learning and multi-task learning consisting of 50 distinct robotic manipulation tasks, with the aim of making it possible to develop algorithms that generalize to accelerate the acquisition of entirely new, held-out tasks. We evaluate 6 state-of-the-art meta-reinforcement learning and multi-task learning algorithms on these tasks. Surprisingly, while each task and its variations (e.g., with different object positions) can be learned with reasonable success, these algorithms struggle to learn with multiple tasks at the same time, even with as few as nine distinct training tasks. Our analysis and open-source environments pave the way for future research in multi-task learning and meta-learning that can enable meaningful generalization, thereby unlocking the full potential of these methods.</p>
+        <p>Meta-reinforcement learning algorithms can enable robots to acquire new skills much more quickly, by leveraging prior experience to learn how to learn. However, much of the current research on meta-reinforcement learning focuses on task distributions that are very narrow. For example, a commonly used meta-reinforcement learning benchmark uses different running velocities for a simulated robot as different tasks. When policies are meta-trained on such narrow task distributions, they cannot possibly generalize to more quickly acquire entirely new tasks. Therefore, if the aim of these methods is enable faster acquisition of entirely new behaviors, we must evaluate them on task distributions that are sufficiently broad to enable generalization to new behaviors. In this paper, we propose an open-source simulated benchmark for meta-reinforcement learning and multi-task learning consisting of 50 distinct robotic manipulation tasks, with the aim of making it possible to develop algorithms that generalize to accelerate the acquisition of entirely new, held-out tasks. We evaluate 6 state-of-the-art meta-reinforcement learning and multi-task learning algorithms on these tasks. Surprisingly, while each task and its variations (e.g., with different object positions) can be learned with reasonable success, these algorithms struggle to learn with multiple tasks at the same time, even with as few as nine distinct training tasks. Our analysis and open-source environments pave the way for future research in multi-task learning and meta-learning that can enable meaningful generalization, thereby unlocking the full potential of these methods.</p>
         <hr>
       </div>
     </div>
@@ -80,10 +80,28 @@
 
   <section class="features" id="alltasks">
     <div class="container">
-      <h2>About the benchmark</h2>
+      <h2>About</h2>
 
-      <p>Meta-World contains 50 manipulation tasks, designed to be diverse yet carry shared structure that can be leveraged for efficient multi-task RL and transfer to new tasks via meta-RL. In the most difficult evaluation, the method must use experience from 45 training tasks (left) to quickly learn distinctly new test tasks.</p>
-      <img src="figures/ml45-1080p.gif" class="img-fluid" alt="">
+      <p>In meta-learning, the goal is not just to learn one skill, but to learn a number of skills. From learning a number of skills, we hope to learn to acquire a completely new skill.</p>
+
+      <img src="img/metalearning.png" class="img-fluid" alt="">
+
+      <p>To evaluate state of the art meta-learning algorithms, we need a diverse set of skills to test on. The Meta-World benchmark contains manipulation tasks, designed to be diverse yet carry shared structure that can be leveraged for efficient multi-task RL and transfer to new tasks via meta-RL. The Meta-World benchmark has three different difficulty modes for evaluation.</p>
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="features" id="alltasks">
+    <div class="container">
+      <h2>Meta-Learning 1</h2>
+
+      <p>Meta-Learning 1 (ML1) is our easiest evaluation mode. The setting is a single task manipulation tasks, where we try to reach, push, and pick and place an object to variable goals. At test time, we present goals not seen during training.</p>
+      <img src="figures/ml1.gif" class="img-fluid" alt="">
 
       <div class="row">
         <div class="col-md-8 mx-auto">
@@ -94,32 +112,69 @@
     </div>
   </section>
 
+<section class="features" id="alltasks">
+    <div class="container">
+      <h2>Meta-Learning 10 and Multi-task 10</h2>
+
+      <p>ML10 is a harder meta-learning task, where we train on 10 manipulation tasks, and are given 5 new ones at test time.</p>
+      <img src="figures/ml10.gif" class="img-fluid" alt="">
+
+      <p>MT10 tests multi-task learning- that is, simply learning a policy that can succeed on a diverse set of tasks, without testing generalization. </p>
+      <img src="figures/mt10.gif" class="img-fluid" alt="">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
+
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="features" id="alltasks">
+    <div class="container">
+      <h2>ML45</h2>
+
+      <p>ML45 is a meta-learning mode with 45 train tasks and 5 test tasks.</p>
+      <img src="figures/ml45-1080p.gif" class="img-fluid" alt="">
+
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
+
+        </div>
+      </div>
+    </div>
+</section>
+
+
+  <section class="features" id="about">
+    <div class="container">
+      <div class="section-heading text-center">
+           <h2>Contributors</h2>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/kevin.png" style="width: 100%">Tianhe Yu</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/deirdre.jpeg" style="width: 100%">Deirdre Quillen</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/zhanpeng.jpg" style="width: 100%">Zhanpeng He</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ryan_julian_cropped_size-small.jpg" style="width: 100%">Ryan Julian</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ChelseaFinn.jpg" style="width: 100%">Chelsea Finn</p>
+        <p style="float: left; font-size: 12pt; text-align: center; width: 15%; margin-right: 1%; margin-bottom: 20em;"><img src="img/portrait_lab_small.png" style="width: 100%">Sergey Levine</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
   <section class="features" id="parametric">
     <div class="cta-content">
       <div class="container">
-        <h2>Parametric vs. Non-Parametric Task Variation</h2>
-        <img src="figures/variation_cartoon.png" height="300" />
-          <p class="text-muted">Parametric/non-parametric variation: all "reach puck tasks (left) can be parameterized by the puck position, while the difference between "reach puck" and "open window" (right) is non-parametric.</p>
+
       </div>
     </div>
     <div class="overlay"></div>
   </section>
 
 
-  <section class="features" id="about">
-    <div class="container">
-      <div class="section-heading text-center">
-          <p class="text-muted">Visualization of three of our multi-task and meta-learning evaluation protocols, ranging from within task adaptation in ML1, to multi-task training across 10 distinct task families in MT10, to adapting to new tasks in ML9.
-        <img src="figures/metaworld-1080p.gif" class="img-fluid" alt="" >
-
-        <hr>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="download bg-primary text-center" id="abstract">
+  <section class="download bg-secondary text-center" id="abstract">
     <div class="container">
       <div class="section-heading text-center">
         <h2>Results and paper coming soon!</h2>
