@@ -74,7 +74,7 @@
     <div class="container" >
       <div class="section-heading text-center">
         <h2>Abstract</h2>
-        <p>Meta-reinforcement learning algorithms can enable robots to acquire new skills much more quickly, by leveraging prior experience to learn how to learn. However, much of the current research on meta-reinforcement learning focuses on task distributions that are very narrow. For example, a commonly used meta-reinforcement learning benchmark uses different running velocities for a simulated robot as different tasks. When policies are meta-trained on such narrow task distributions, they cannot possibly generalize to more quickly acquire entirely new tasks. Therefore, if the aim of these methods is enable faster acquisition of entirely new behaviors, we must evaluate them on task distributions that are sufficiently broad to enable generalization to new behaviors. In this paper, we propose an open-source simulated benchmark for meta-reinforcement learning and multi-task learning consisting of 50 distinct robotic manipulation tasks, with the aim of making it possible to develop algorithms that generalize to accelerate the acquisition of entirely new, held-out tasks. We evaluate 6 state-of-the-art meta-reinforcement learning and multi-task learning algorithms on these tasks. Surprisingly, while each task and its variations (e.g., with different object positions) can be learned with reasonable success, these algorithms struggle to learn with multiple tasks at the same time, even with as few as nine distinct training tasks. Our analysis and open-source environments pave the way for future research in multi-task learning and meta-learning that can enable meaningful generalization, thereby unlocking the full potential of these methods.</p>
+        <p>Meta-reinforcement learning algorithms can enable robots to acquire new skills much more quickly, by leveraging prior experience to learn how to learn. However, much of the current research on meta-reinforcement learning focuses on task distributions that are very narrow. For example, a commonly used meta-reinforcement learning benchmark uses different running velocities for a simulated robot as different tasks. When policies are meta-trained on such narrow task distributions, they cannot possibly generalize to more quickly acquire entirely new tasks. Therefore, if the aim of these methods is enable faster acquisition of entirely new behaviors, we must evaluate them on task distributions that are sufficiently broad to enable generalization to new behaviors. In this paper, we propose an open-source simulated benchmark for meta-reinforcement learning and multi-task learning consisting of 50 distinct robotic manipulation environments, with the aim of making it possible to develop algorithms that generalize to accelerate the acquisition of entirely new, held-out tasks. We evaluate 7 state-of-the-art meta-reinforcement learning and multi-task learning algorithms on these tasks. Surprisingly, while each task and its variations (e.g., with different object positions) can be learned with reasonable success, these algorithms struggle to learn with multiple tasks at the same time, even with as few as nine distinct training tasks. Our analysis and open-source environments pave the way for future research in multi-task learning and meta-learning that can enable meaningful generalization, thereby unlocking the full potential of these methods.</p>
         <hr>
       </div>
     </div>
@@ -100,8 +100,8 @@
         <!--<h2>Meta-World Evaluation Modes</h2>-->
       <h3>Meta-Learning 1 (ML1)</h3>
 
-      <p>Meta-Learning 1 (ML1) is our easiest evaluation mode. The setting is a single task manipulation tasks, where we try to reach, push, and pick and place an object to variable goals. At test time, we present goals not seen during training.</p>
-      <img src="figures/ml1.gif" class="img-fluid" alt="">
+      <p>Meta-Learning 1 (ML1) is our easiest meta-learning evaluation mode. The setting is a single task manipulation tasks, where we try to reach, push, and pick and place an object to variable goals. At test time, we present goals not seen during training.</p>
+      <img src="figures/ML1.gif" class="img-fluid" alt="">
 
       <div class="row">
         <div class="col-md-8 mx-auto">
@@ -112,14 +112,29 @@
     </div>
 
     <div class="container">
+      <!--<h2>Meta-World Evaluation Modes</h2>-->
+    <h3>Multi-Task 1 (MT1)</h3>
+
+    <p>Multi-Task 1 (MT1) is our easiest evaluation mode. The setting is a single task manipulation tasks, where we try to reach, push, and pick and place an object to variable goals, without testing generalization.</p>
+    <img src="figures/MT1.gif" class="img-fluid" alt="">
+
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
+
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
       <h3>Meta-Learning 10 (ML10)</h3>
 
       <p>ML10 is a harder meta-learning task, where we train on 10 manipulation tasks, and are given 5 new ones at test time.</p>
-      <img src="figures/ml10.gif" class="img-fluid" alt="">
+      <img src="figures/ML10.gif" class="img-fluid" alt="">
 
       <h3>Multi-Task 10 (MT10)</h3>
-      <p>MT10 tests multi-task learning- that is, simply learning a policy that can succeed on a diverse set of tasks, without testing generalization. </p>
-      <img src="figures/mt10.gif" class="img-fluid" alt="">
+      <p>MT10 tests multi-task learning- that is, simply learning a policy that can succeed on a diverse set of tasks, without testing generalization.</p>
+      <img src="figures/MT10.gif" class="img-fluid" alt="">
       <div class="row">
         <div class="col-md-8 mx-auto">
           <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
@@ -132,11 +147,11 @@
     <div class="container">
       <h3>Meta-Learning 45 (ML45)</h3>
 
-      <p>ML45 is a meta-learning mode with 45 train tasks and 5 test tasks.</p>
-      <img src="figures/ml45-1080p.gif" class="img-fluid" alt="">
+      <p>ML45 is a meta-learning mode with 45 train environments and 5 test environments.</p>
+      <img src="figures/ML45.gif" class="img-fluid" alt="">
 
       <h3>Multi-Task 50 (MT50)</h3>
-      <p>Finally, MT50 evaluates the ability to efficiently learn all 50 of the above manipulation tasks.</p>
+      <p>Finally, MT50 evaluates the ability to efficiently learn all 50 of the above manipulation environments.</p>
       <div class="row">
         <div class="col-md-8 mx-auto">
           <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2> -->
@@ -146,18 +161,20 @@
     </div>
 </section>
 
-
   <section class="features" id="about">
     <div class="container">
       <div class="section-heading ">
            <h2>Authors</h2>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/kevin.png" style="width: 100%"><a href="https://cs.stanford.edu/~tianheyu/">Tianhe Yu</a><br> Stanford University</p>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/deirdre.jpeg" style="width: 100%"><a href="https://deirdrequillen.github.io/">Deirdre Quillen</a><br> UC Berkeley</p>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/zhanpeng.jpg" style="width: 100%"><a href="https://zhanpenghe.github.io/">Zhanpeng He</a><br> Columbia University</p>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ryan_julian_cropped_size-small.jpg" style="width: 100%">Ryan Julian<br> USC</p>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/karol.jpg" style="width: 100%">Karol Hausman<br>Robotics at Google</p>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ChelseaFinn.jpg" style="width: 100%">Chelsea Finn<br> Stanford University</p>
-           <p style="float: left; font-size: 12pt; text-align: center; width: 13%; margin-right: 1%; margin-bottom: 20em;"><img src="img/portrait_lab_small.png" style="width: 100%">Sergey Levine<br> UC Berkeley</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/kevin.png" style="width: 100%"><a href="https://cs.stanford.edu/~tianheyu/">Tianhe Yu</a><br> Stanford University</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/deirdre.jpeg" style="width: 100%"><a href="https://deirdrequillen.github.io/">Deirdre Quillen</a><br> UC Berkeley</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/zhanpeng.jpg" style="width: 100%"><a href="https://zhanpenghe.github.io/">Zhanpeng He</a><br> Columbia University</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ryan_julian_cropped_size-small.jpg" style="width: 100%">Ryan Julian<br>University Of Southern California</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/avnish.jpg" style="width: 100%"><a href="https://avnishn.github.io/">Avnish Narayan</a><br>University Of Southern California</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/hayden.jpg" style="width: 100%"><a href="https://www.haydenshively.info/about">Hayden Shively</a><br>University Of Southern California</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/adi.jpeg" style="width: 100%"><a href="http://adithyab.me/">Adithya Bellathur</a><br>University Of Southern California</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/karol.jpg" style="width: 100%">Karol Hausman<br>Robotics at Google</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/ChelseaFinn.jpg" style="width: 100%">Chelsea Finn<br> Stanford University</p>
+           <p style="float: left; font-size: 12pt; text-align: center; width: 9%; margin-right: 1%; margin-bottom: 20em;"><img src="img/portrait_lab_small.png" style="width: 100%">Sergey Levine<br> UC Berkeley</p>
       </div>
       </div>
     </div>
